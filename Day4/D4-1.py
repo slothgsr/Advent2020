@@ -13,6 +13,7 @@ with open(file) as f:
                 templist = []
         for word in line.split():
             templist.append(word)
+    wordlist.append(templist)
 
 musthave=['byr:','iyr:','eyr:','hgt:','hcl:','ecl:','pid:']
 positive = 0
