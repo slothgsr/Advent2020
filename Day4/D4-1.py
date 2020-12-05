@@ -1,7 +1,7 @@
 import os
 import itertools
 
-file = (r'C:\Users\SlothGSR\Desktop\python_stuff\MyPythonScripts\Advent2020\Day4\input.txt')
+file = (r'C:\Users\Dustin\Desktop\MyPythonScripts\advent2020\Advent2020\Day4\input.txt')
 
 with open(file) as f:
     space = 1
