@@ -9,12 +9,6 @@ file = ("test.txt")
 with open(file) as f:
     tickets = [line.rstrip('\n') for line in f]
 
-rowsmin = 0
-rowsmax = 127
-columnsmax = 8
-columnsmin = 0
-
-
 for ticket in tickets:
     rowsmin = 0
     rowsmax = 127
