@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import bisect 
 
@@ -21,16 +22,8 @@ for ticket in tickets:
     columnsmin = 0
     print("ticket")
     print(ticket[0])
-    if ticket[0] == "F" :
-            rowsmax = 64
-            # print("max:",rowsmax)
-            # print("min:",rowsmin)
-    if ticket[0] == "B" :
-            rowsmin = 63
-            # print("max:",rowsmax)
-            # print("min:",rowsmin)
 
-    for letter in ticket[1:6]:
+    for letter in ticket[0:7]:
         print(letter)
         if letter == "F":
             rowsmax = rowsmax - (rowsmax - rowsmin) /2
@@ -42,13 +35,5 @@ for ticket in tickets:
             # print("min:",rowsmin)
     rowsmax -= 1
 
-
-    print("ticket:",ticket[7])
-    if ticket[7] == "F":
-        print(rowsmax)
-    else:
-        print(rowsmin)
-
-
-
+    print(rowsmin, rowsmax)
 
