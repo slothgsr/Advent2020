@@ -17,8 +17,8 @@ columnsmin = 0
 
 for ticket in tickets:
     rowsmin = 0
-    rowsmax = 128
-    columnsmax = 8
+    rowsmax = 127
+    columnsmax = 7
     columnsmin = 0
     print("ticket")
     print(ticket[0])
@@ -26,14 +26,13 @@ for ticket in tickets:
     for letter in ticket[0:7]:
         print(letter)
         if letter == "F":
-            rowsmax = rowsmax - (rowsmax - rowsmin) /2
+            rowsmax = rowsmax - (rowsmax - rowsmin + 1) /2
             # print("max:",rowsmax)
             # print("min:",rowsmin)
         if letter == "B":
-            rowsmin = rowsmin + (rowsmax - rowsmin) /2
+            rowsmin = rowsmin + (rowsmax - rowsmin + 1) /2
             # print("max:",rowsmax)
             # print("min:",rowsmin)
-    rowsmax -= 1
 
     print(rowsmin, rowsmax)
 
