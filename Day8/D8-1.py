@@ -13,9 +13,6 @@ for i in operations:
     labeledlist.append(f"{label} {i} ")
     label += 1
 
-# print(labeledlist)
-
-checking = True
 used = []
 start = 0
 currentline = 0
