@@ -5,9 +5,12 @@ os.chdir((os.path.dirname(os.path.realpath(__file__))))
 file = ("input.txt")
 
 with open(file) as f:
-    bags = [line.rstrip('\n') for line in f]
+    bags = [line.rstrip('\n').replace("contain", ",").split(",") for line in f]
 
-print(bags)
+#print(bags)
 
+
+for i, j in bags:
+    print(j.strip())
 
 
