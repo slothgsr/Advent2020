@@ -25,9 +25,30 @@ for i in numbers[26:]:
     if combocheck(start,numbers) == True:
         start +=1
     else:
-        badnum = i
-        print(badnum)
+        nogood = i
         start +=1
+
+print(nogood)
+
+for i in range(len(numbers)):
+    templist=[]
+    adder = i
+    start = numbers[i]
+    templist.append(start)
+    while sum(templist) < nogood:
+        adder += 1
+        templist.append(numbers[adder])
+
+        if sum(templist) == nogood:
+            print(sorted(templist)[0] + sorted(templist)[-1])
+            break
+
+        
+
+
+
+
+
 
 
 
